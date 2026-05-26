@@ -10,7 +10,7 @@ local, cross-vendor memory layer that captures events from AI tools (opencode, C
 Code, Cursor, Gemini, Codex, and others), distills them into typed, time-aware memories,
 and injects compact context back into new sessions.
 
-Read the full spec: **[SPEC.md](./SPEC.md)**.
+Read the full spec: **[SPEC.md](./SPEC.md)** — also available as [Gist](https://gist.github.com/crottolo/a5d3e33573de373c4a3673985b3000cf) for easy sharing.
 
 ## Why
 
