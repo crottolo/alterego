@@ -11,11 +11,11 @@ conventions. Your project assistant doesn't know the decision you made yesterday
 different agent on a different machine.
 
 The pattern proposed here is simple: instead of each AI tool maintaining its own opaque,
-vendor-locked memory of you, you run a **local memory layer** that every AI tool you use
-writes to and reads from. The layer observes — passively, while you work — and distills
-events into typed, time-aware memories. New sessions start with the right context already
-loaded. The memory lives on your machine (or a server you control), in a format you can
-inspect, edit, export, and migrate.
+vendor-locked memory, you run a **local memory layer** that every AI tool you use writes
+to and reads from. The layer observes — passively, while you work — and distills events
+into typed, time-aware memories. New sessions start with the right context already loaded.
+The memory lives on your machine (or a server you control), in a format you can inspect,
+edit, export, and migrate.
 
 This is not RAG. RAG retrieves chunks from documents at query time. This is observational:
 events come _from_ your AI tools as you use them, get classified into structured memories,
@@ -42,9 +42,9 @@ Current options fall into three categories, each with a structural limit:
   from _what you do_.
 
 None of these answer the question: _what does the system know about me that it learned
-from watching me work?_ Apple is the only large vendor positioned to build this on-device,
-but Apple will not bridge to WhatsApp, opencode, or anything outside its ecosystem. The
-cross-tool, observation-based, user-controlled memory layer is a gap.
+from watching me work?_ Apple is the only large vendor well-placed to build this
+on-device, but Apple will not bridge to WhatsApp, opencode, or anything outside its
+ecosystem. The cross-tool, observation-based, user-controlled memory layer is a gap.
 
 ## Architecture
 
@@ -244,15 +244,15 @@ edges. `alterego import` reads the same format, plus converters from Claude memo
 ChatGPT memory export, OpenClaw `MEMORY.md`, and Obsidian vaults. No data is held hostage.
 
 When extended to non-AI channels (mail, messaging, calendar), the privacy stakes increase:
-the system begins capturing data about third parties who did not consent. The
-recommendation is firm: third-party data flows through a local-only classifier, not a
-cloud LLM. Sensitive entities can be opt-out per-person. This is design from day one, not
-a future patch.
+the system starts capturing data about third parties who did not consent. The
+recommendation is firm: third-party data flows through a local-only classifier, never a
+cloud LLM. Sensitive entities can be opted out individually. This is design from day one,
+not a future patch.
 
 ## Why this works
 
-Karpathy's LLM Wiki observed that the burden of maintaining a knowledge base is not the
-reading or the thinking — it is the bookkeeping. LLMs are good at bookkeeping.
+Karpathy noted in the LLM Wiki gist that the burden of maintaining a knowledge base is
+not the reading or the thinking — it is the bookkeeping. LLMs are good at bookkeeping.
 
 AlterEgo applies the same observation to the user's profile rather than to a domain. The
 user works. The system watches. Events become typed memories. Sessions inherit context
