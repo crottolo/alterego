@@ -28,6 +28,12 @@ This document defines what that layer would look like.
 - **[MEMORY-TYPES.md](./MEMORY-TYPES.md)** — the eight base memory types, expanded
 - **[CONSTITUTION-TEMPLATE.md](./CONSTITUTION-TEMPLATE.md)** — template for `~/.alterego/schema/manifest.md`
 
+## Examples
+
+- **[examples/f0-extractor/](./examples/f0-extractor/)** — runnable deterministic-first
+  reference implementation in Python 3 (stdlib only). Reads canonical events JSONL,
+  produces a `me.md` profile. Ships with 93 synthetic events and a sample output.
+
 ## Status
 
 **Phase 0: specification.** No code yet. The document is intended to be shared with an
