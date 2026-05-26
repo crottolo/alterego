@@ -21,13 +21,21 @@ Read the full spec: **[SPEC.md](./SPEC.md)** — also available as [Gist](https:
 
 This document defines what that layer would look like.
 
+## Documentation
+
+- **[SPEC.md](./SPEC.md)** — the full specification (also available as [Gist](https://gist.github.com/crottolo/a5d3e33573de373c4a3673985b3000cf))
+- **[ADAPTERS.md](./ADAPTERS.md)** — per-platform implementation reference (18 AI tools)
+- **[MEMORY-TYPES.md](./MEMORY-TYPES.md)** — the eight base memory types, expanded
+- **[CONSTITUTION-TEMPLATE.md](./CONSTITUTION-TEMPLATE.md)** — template for `~/.alterego/schema/manifest.md`
+
 ## Status
 
 **Phase 0: specification.** No code yet. The document is intended to be shared with an
 LLM agent and instantiated against your specific tools and domain.
 
-If you build an implementation, an adapter, or a fork — open an issue or PR linking to
-it. The pattern grows by accumulation.
+If you build an implementation, an adapter, or a fork — open an issue (use the
+[Adapter Proposal](./.github/ISSUE_TEMPLATE/adapter-proposal.md) template) or PR
+linking to it. The pattern grows by accumulation.
 
 ## Inspiration
 
